@@ -22,7 +22,6 @@ jobs:
         run: npm audit signatures
       - name: Semantic Release
         run: |
-            npm install -g @commitlint/cli @commitlint/config-conventional commitlint-changelog-conventionalcommits 
             npx -p @semantic-release/commit-analyzer -p @semantic-release/changelog -p @semantic-release/git -p semantic-release semantic-release
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
