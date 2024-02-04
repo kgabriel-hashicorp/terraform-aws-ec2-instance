@@ -18,6 +18,7 @@ jobs:
         run: |
             npm install --package-lock-only
             npm clean-install
+            npm i --save-dev conventional-changelog-conventionalcommits
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
       - name: Semantic Release
