@@ -2,6 +2,60 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.0 (2024-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* breaking change test
+* Raise minimum required Terraform version to 1.0+ (#331)
+* Add support for user_data_replace_on_change, and updated AWS provider to v4.7+ (#272)
+
+### Features
+
+* Add "num_suffix_format" variable for instance naming ([#147](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/147)) ([08eb577](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/08eb577b886dd737254f73ee83c72651950f38dc))
+* Add `availability_zone` output ([#347](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/347)) ([1b2cdeb](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/1b2cdeba14ee0aba4f687996fde8ab6eb2ad27c6))
+* Add `instance_metadata_tags` attribute and bump AWS provider to support ([#254](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/254)) ([b2fb960](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/b2fb9604b32aa23d14a8a6e3cff761d6c69661b7))
+* add commit analyzer ([86ae529](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/86ae529db9217c185a71d247001d544471e2303b))
+* Add cpu optimization options ([#181](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/181)) ([19b44d2](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/19b44d2566de385243aab99d1c3cd6bcca0ed3db))
+* Add example for connecting via Session Manager without Internet access ([#336](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/336)) ([68edef8](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/68edef8e2a83f6492db63b684cf5ad7065b89d6f))
+* Add input variable 'instance_tags' ([#343](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/343)) ([025d3b4](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/025d3b4beca9835a5e997e41677a4c6441a733f4))
+* Add instance IPv6 addresses to the outputs ([#249](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/249)) ([08bdf6a](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/08bdf6af910f665149d8d64a19175b89a8fac447))
+* Add instance private IP to the outputs ([#241](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/241)) ([ae0c50e](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/ae0c50eae8e6363f434f96feb07d7ebb0e037e0f))
+* Add support for `disable_api_stop` attribute ([#275](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/275)) ([cb367ec](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/cb367ec54e4386512e37b8ef0b8d01c78f589fb1))
+* Add support for `maintenance_options` ([#312](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/312)) ([2aaa990](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/2aaa99011a5ae0224da13691e9d288a5ef7cbd0d))
+* Add support for creating IAM role/instance profile with policies ([#302](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/302)) ([787132e](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/787132e5dbe7b58e4b9a62e1a69a682bcbb9bd58))
+* Add support for EBS GP3 throughput ([#233](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/233)) ([b06e376](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/b06e376630bf38a35844ce5858f6b5ce63f58277))
+* Add support for metadata_options argument ([#193](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/193)) ([ef28a16](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/ef28a16d72a5b4c23a283499728c3d43c5522504))
+* add support for spot instances via spot instance requests ([#236](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/236)) ([528613d](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/528613d4580f2c1266e87d8d24fc25bf5290fe2c))
+* Add support for user_data_replace_on_change, and updated AWS provider to v4.7+ ([#272](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/272)) ([4d7f3d8](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/4d7f3d873b0d2be7361d439e62b872a895073342))
+* add tags support to root block device ([#218](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/218)) ([c49475f](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/c49475f73d7dc3d3b4f54c1074d580c0ce0b071c))
+* add terraform  test ([b8085f0](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/b8085f0b0fd71ce600ecdad6a2e2855a71277fcc))
+* Add unique tags to EBS block devices ([#327](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/327)) ([55ed759](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/55ed759b9fbc475629da2d5068a593a2ce08d8dc))
+* Added wrappers automatically generated via pre-commit hook ([#271](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/271)) ([6e8c541](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/6e8c541b2d9b3fe54c9acc7f4d271648c5844c9b))
+* Addition of block device information in outputs ([#319](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/319)) ([884e244](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/884e24466e19144e6b5a1085ab81b377174c6e0c))
+* breaking change test ([606f9d2](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/606f9d230916cb4fcf52e592e5385045e9b1f45e))
+* Implementation of the cpu_options block and addition of support for AMD SEV-SNP ([#334](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/334)) ([6a123ad](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/6a123adb10393759fcdd18795fbf1484c5f44dde))
+* Made it clear that we stand with Ukraine ([6867788](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/6867788411a202b61187f9935e9eaa72a18f0bbe))
+* Raise minimum required Terraform version to 1.0+ ([#331](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/331)) ([9d4e0ca](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/9d4e0ca389535522808ddf988e3a6510bb143161))
+* Remove call data ssm parameter when ami id is specified ([#351](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/351)) ([7ffc3dd](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/7ffc3dd843efecd543fecb0a1b556004d7db2bb7))
+* Support Private DNS name options ([#370](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/370)) ([d3520fd](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/d3520fd9afc35a2598604e4219ade15021960ba9))
+
+
+### Bug Fixes
+
+* add missing variable to the usage example ([71a597a](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/71a597adc783520270b5f53b3b0f1907ee4d24bb))
+* Assignment of the Capacity Reservation id to an instance ([#282](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/282)) ([7f0a0ae](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/7f0a0ae66cbe50d0ea1c09191de4e82cfa8c4ca2))
+* Correct capacity reservation target ([#288](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/288)) ([135145e](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/135145e252c69814c019da49c638973f93523f6a))
+* Creation of an Instance with a Capacity Reservation ID ([#278](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/278)) ([f12ac95](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/f12ac95aa309fdbf532ba1d5a9841690ca7fdb8e))
+* Fixed ami variable when using without ssm ([#354](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/354)) ([a1691a0](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/a1691a050d92e800b584a5624f3d8f2114e000c6))
+* Fixed outputs for Block Devices ([#344](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/344)) ([80381d2](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/80381d2c94e6aec7aa308f4a6cf24732a87c8237))
+* Marked AMI id as nonsensitive ([#321](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/321)) ([1ae1d5c](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/1ae1d5ce73d6bef0e42821406f82ff16fe718177))
+* root_block_device tags conflicts ([#220](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/220)) ([eafbf1c](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/eafbf1c6a0874ebc7655e25f48b4bd74bd33d592))
+* The capacity_reservation_specification default value is updated from null to {} ([#285](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/285)) ([9af6601](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/9af6601abbcfe06fc907ea1eb3abffe30d26daf2))
+* Update CI configuration files to use latest version ([#303](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/303)) ([2151031](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/21510318bffcfa84a13c5ec8cbb93dff9871a4f9))
+* update CI/CD process to enable auto-release workflow ([#250](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/issues/250)) ([1508c9e](https://github.com/kgabriel-hashicorp/terraform-aws-ec2-instance/commit/1508c9ec45ba954828c734326366143a17434a0f))
+
 ## [5.6.0](https://github.com/terraform-aws-modules/terraform-aws-ec2-instance/compare/v5.5.0...v5.6.0) (2023-12-25)
 
 
